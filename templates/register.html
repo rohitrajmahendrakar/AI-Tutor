@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block hero %}
+<div class="hero-panel container">
+  <div class="hero-copy">
+    <p class="eyebrow">Create your tutor account</p>
+    <h1>Blend curated knowledge with on-demand explanations.</h1>
+    <p>Register once to unlock transparent answers, evaluation dashboards, and personalized study notes.</p>
+  </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<section class="form-layout">
+  <div class="info-card">
+    <h3>What you get</h3>
+    <ul>
+      <li>Source labels for every response.</li>
+      <li>Automatic fallback between Gemma and DistilGPT2.</li>
+      <li>Evaluation tools for your own question sets.</li>
+    </ul>
+  </div>
+
+  <div class="form-card">
+    <h2>Create Account</h2>
+    <form method="POST" action="/register">
+      <label>Full Name</label>
+      <input type="text" name="name" placeholder="Full Name" required>
+
+      <label>Email</label>
+      <input type="email" name="email" placeholder="you@example.com" required>
+
+      <label>Password</label>
+      <input type="password" name="password" placeholder="Choose a secure password" required>
+
+      {% if error %}<p class="form-error">{{ error }}</p>{% endif %}
+
+      <button type="submit">Register</button>
+      <p class="form-footnote">Already registered? <a href="/login">Login</a></p>
+    </form>
+  </div>
+</section>
+{% endblock %}

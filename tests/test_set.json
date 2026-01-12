@@ -1,0 +1,36 @@
+{
+    "faq": [
+        {
+            "question": "What is gradient descent?",
+            "expected_source": "dataset"
+        },
+        {
+            "question": "Explain Python decorators with an example.",
+            "expected_source": "dataset"
+        },
+        {
+            "question": "How do I load a CSV in pandas?",
+            "expected_source": "dataset"
+        }
+    ],
+    "paraphrases": [
+        {
+            "question": "Could you describe how gradient descent works?",
+            "expected_source": "dataset"
+        },
+        {
+            "question": "Show me an example decorator in Python.",
+            "expected_source": "dataset"
+        }
+    ],
+    "unseen": [
+        {
+            "question": "What is the bias-variance tradeoff?",
+            "expected_source": "llm-or-uncertain"
+        },
+        {
+            "question": "How can I optimize SQL joins?",
+            "expected_source": "llm-or-uncertain"
+        }
+    ]
+}

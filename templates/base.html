@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Tutor Companion</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    {% block extra_head %}{% endblock %}
+</head>
+
+<body>
+    <div class="app-shell">
+        <header class="site-header">
+            <div class="navbar container">
+                <a class="brand" href="/">
+                    <div class="brand-mark">AI</div>
+                    <div class="brand-text">
+                        <span>AI Tutor</span>
+                        <small>Python · Data Science</small>
+                    </div>
+                </a>
+                <nav class="nav-links">
+                    <a href="/">Home</a>
+                    <a href="/chat">Chat</a>
+                    {% if session.get('user') %}
+                        <a class="cta" href="/logout">Logout</a>
+                    {% else %}
+                        <a href="/login">Login</a>
+                        <a class="cta" href="/register">Register</a>
+                    {% endif %}
+                </nav>
+            </div>
+            {% block hero %}
+            <div class="hero-panel container">
+                <div class="hero-copy">
+                    <p class="eyebrow">Intelligent Study Companion</p>
+                    <h1>Learn Python and Data Science with confidence.</h1>
+                    <p>Combine curated answers with on-demand language model explanations, complete with transparent
+                        sourcing.</p>
+                </div>
+            </div>
+            {% endblock %}
+        </header>
+
+        <main class="page-content">
+            <div class="container page-inner">
+                {% block content %}{% endblock %}
+            </div>
+        </main>
+
+        <footer class="site-footer">
+            <div class="container footer-grid">
+                <div>
+                    <div class="brand-mark brand-mark--mini">AI</div>
+                    <p class="footer-copy">Supporting learners with trustworthy answers, contextual explanations, and a
+                        transparent workflow.</p>
+                </div>
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/chat">Chat</a></li>
+                        {% if session.get('user') %}
+                            <li><a href="/logout">Logout</a></li>
+                        {% else %}
+                            <li><a href="/login">Login</a></li>
+                            <li><a href="/register">Register</a></li>
+                        {% endif %}
+                    </ul>
+                </div>
+                <div>
+                    <h4>Study Focus</h4>
+                    <ul>
+                        <li>Python fundamentals</li>
+                        <li>Data analysis with pandas</li>
+                        <li>Machine learning concepts</li>
+                        <li>Interview readiness</li>
+                    </ul>
+                </div>
+            </div>
+            <p class="copyright">© AI Tutor Companion. All rights reserved.</p>
+        </footer>
+    </div>
+    {% block extra_scripts %}{% endblock %}
+</body>
+
+</html>

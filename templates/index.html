@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="card-grid">
+  <article class="info-card">
+    <h3>Transparent learning workflow</h3>
+    <p>Your tutor clearly states whether an answer comes from the curated dataset or from the language model.</p>
+    <ul>
+      <li>Auto-normalized queries for reliable retrieval.</li>
+      <li>Configurable similarity thresholds with logging.</li>
+      <li>Fallback to Gemma or DistilGPT2 depending on availability.</li>
+    </ul>
+    <div class="cta-row">
+      {% if session.get('user') %}
+      <a class="cta" href="/chat">Jump into chat</a>
+      {% else %}
+      <a class="cta" href="/login">Get started</a>
+      {% endif %}
+    </div>
+  </article>
+  <article class="info-card">
+    <h3>Evaluation ready</h3>
+    <p>Use the bundled test harness to benchmark retrieval accuracy, latency, and fallback quality for your own
+      questions.</p>
+    <ul>
+      <li>Structured FAQ, paraphrase, and unseen prompts.</li>
+      <li>Latency metrics for each call.</li>
+      <li>Source-label tracking for auditability.</li>
+    </ul>
+  </article>
+</section>
+
+<section class="landing-chat">
+  <aside class="session-details">
+    <div class="detail-card">
+      <h3>Designed for clarity</h3>
+      <p>Distinct styling keeps your questions separate from the tutor's responses, while each message carries a
+        transparent label.</p>
+    </div>
+    <div class="detail-card">
+      <h3>Need inspiration?</h3>
+      <ul>
+        <li>"How does gradient descent update weights?"</li>
+        <li>"Explain Python list comprehensions."</li>
+        <li>"Compare decision trees and random forests."</li>
+      </ul>
+    </div>
+  </aside>
+
+  <div class="preview-chat">
+    <h3>Try it out</h3>
+    <div id="preview-chat-box" class="message-list"></div>
+    <form id="preview-chat-form" class="chat-form">
+      <input type="text" id="preview-user-input" placeholder="Ask a question..." required autocomplete="off">
+      <button type="submit">Send</button>
+    </form>
+  </div>
+</section>
+{% endblock %}
+
+{% block extra_scripts %}
+<script src="https://cdn.jsdelivr.net/npm/dompurify@3.1.7/dist/purify.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="{{ url_for('static', filename='chat.js') }}"></script>
+<script>
+  const form = document.getElementById('preview-chat-form');
+  const input = document.getElementById('preview-user-input');
+  const chatBox = document.getElementById('preview-chat-box');
+
+  // Configure marked
+  if (typeof marked !== 'undefined') {
+    marked.setOptions({
+      breaks: true,
+      gfm: true
+    });
+  }
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    await sendMessage(input.value.trim(), chatBox, input, false);
+  });
+</script>
+{% endblock %}

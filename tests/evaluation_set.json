@@ -1,0 +1,132 @@
+{
+  "evaluation_questions": [
+    {
+      "id": 1,
+      "question": "What is the difference between a variable and an object in Python?",
+      "topic": "Python Fundamentals",
+      "expected_source": "dataset",
+      "category": "concept_comparison"
+    },
+    {
+      "id": 2,
+      "question": "How do you read a CSV file using pandas?",
+      "topic": "Data Science",
+      "expected_source": "dataset",
+      "category": "practical_usage"
+    },
+    {
+      "id": 3,
+      "question": "Explain the difference between a tuple and a list.",
+      "topic": "Python Data Structures",
+      "expected_source": "dataset",
+      "category": "concept_comparison"
+    },
+    {
+      "id": 4,
+      "question": "What is the difference between a built-in function and an imported function?",
+      "topic": "Python Functions",
+      "expected_source": "dataset",
+      "category": "concept_comparison"
+    },
+    {
+      "id": 5,
+      "question": "How can I speed up Python code?",
+      "topic": "Python Performance",
+      "expected_source": "dataset",
+      "category": "optimization"
+    },
+    {
+      "id": 6,
+      "question": "What is the difference between True and False in Python?",
+      "topic": "Python Fundamentals",
+      "expected_source": "dataset",
+      "category": "basic_concepts"
+    },
+    {
+      "id": 7,
+      "question": "Explain gradient descent in simple terms.",
+      "topic": "Machine Learning",
+      "expected_source": "llm",
+      "category": "ml_concepts"
+    },
+    {
+      "id": 8,
+      "question": "What are the different types of variables in Python?",
+      "topic": "Python Fundamentals",
+      "expected_source": "dataset",
+      "category": "basic_concepts"
+    },
+    {
+      "id": 9,
+      "question": "How do you declare a variable in Python?",
+      "topic": "Python Fundamentals",
+      "expected_source": "dataset",
+      "category": "basic_concepts"
+    },
+    {
+      "id": 10,
+      "question": "What is the difference between an expression and an operator?",
+      "topic": "Python Fundamentals",
+      "expected_source": "dataset",
+      "category": "concept_comparison"
+    },
+    {
+      "id": 11,
+      "question": "Can you explain how neural networks learn from data?",
+      "topic": "Machine Learning",
+      "expected_source": "llm",
+      "category": "ml_concepts"
+    },
+    {
+      "id": 12,
+      "question": "What is the difference between the print function and the print() function?",
+      "topic": "Python Functions",
+      "expected_source": "dataset",
+      "category": "syntax_clarification"
+    },
+    {
+      "id": 13,
+      "question": "How does pandas handle missing values in a DataFrame?",
+      "topic": "Data Science",
+      "expected_source": "dataset",
+      "category": "practical_usage"
+    },
+    {
+      "id": 14,
+      "question": "Explain the concept of list comprehensions in Python.",
+      "topic": "Python Data Structures",
+      "expected_source": "dataset",
+      "category": "advanced_concepts"
+    },
+    {
+      "id": 15,
+      "question": "What are the advantages of using NumPy arrays over Python lists?",
+      "topic": "Data Science",
+      "expected_source": "llm",
+      "category": "performance_comparison"
+    }
+  ],
+  "metadata": {
+    "total_questions": 15,
+    "topics": [
+      "Python Fundamentals",
+      "Data Science",
+      "Machine Learning",
+      "Python Data Structures",
+      "Python Functions",
+      "Python Performance"
+    ],
+    "categories": [
+      "concept_comparison",
+      "practical_usage",
+      "optimization",
+      "basic_concepts",
+      "ml_concepts",
+      "syntax_clarification",
+      "advanced_concepts",
+      "performance_comparison"
+    ],
+    "created_date": "2024-01-01",
+    "description": "Evaluation set for AI Tutor Chatbot covering various Python and Data Science topics"
+  }
+}

@@ -1,0 +1,64 @@
+# ===============================
+# Python cache & compiled files
+# ===============================
+__pycache__/
+*.py[cod]
+*$py.class
+
+# ===============================
+# Virtual environments
+# ===============================
+venv/
+env/
+.venv/
+ENV/
+
+# ===============================
+# Jupyter Notebook
+# ===============================
+.ipynb_checkpoints/
+
+# ===============================
+# Environment & secrets
+# ===============================
+.env
+.env.*
+*.pem
+*.key
+
+# ===============================
+# Logs & temp files
+# ===============================
+*.log
+*.tmp
+*.swp
+
+# ===============================
+# OS generated files
+# ===============================
+.DS_Store
+Thumbs.db
+
+# ===============================
+# IDE / Editor config
+# ===============================
+.vscode/
+.idea/
+*.code-workspace
+
+# ===============================
+# Build / distribution
+# ===============================
+build/
+dist/
+*.egg-info/
+
+# ===============================
+# Model / data files (optional)
+# Uncomment if needed
+# ===============================
+# data/
+# models/
+# *.pkl
+# *.joblib
+

@@ -1,0 +1,8 @@
+{
+  "total_questions": 15,
+  "successful_responses": 15,
+  "context_retrieval_rate": 0.8666666666666667,
+  "mean_similarity": 0.24046746943846375,
+  "mean_latency_ms": 2369.6,
+  "grounding_rate": 0.26666666666666666
+}
